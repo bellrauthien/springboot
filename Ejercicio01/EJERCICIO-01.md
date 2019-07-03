@@ -23,7 +23,7 @@
 
 Imaginemos que tenemos una tienda de bicicletas. Necesitamos un catálogo de productos para vender a nuestros clientes. Lo primero que debemos hacer es dar de alta todos los productos en el catálogo.
 
-Utilizaremos Spring Data JPA para crear e interactuar con un catálogo de bicicletas. El catálogo vive en memoria; es decir, la base de datos de bicicletas se crea cuando levanta la aplicación y se destruye cuando la aplicación finaliza.
+Utilizaremos Spring Data JPA para crear e interactuar con un catálogo de bicicletas. El catálogo vive en memoria; es decir, la base de datos de bicicletas se crea cuando levanta la aplicación y se destruye cuando la aplicación finaliza. Para crear la base de datos en memoria vamos a usar H2 Database. 
 
 ## Importar el código
 
@@ -33,7 +33,7 @@ Importar el código en eclipse es muy simple.
 2. Root Directory: seleccionar la carpeta del proyecto. Automáticamente se seleccionará el archivo pom.xml que está ahí (Finish).
 3. ¡Ahora podemos ver el código en Eclipse!
 
-## Bean
+## El Bean
 
 Lo primero que necesitamos es crear un bean, es decir, una tabla que almacene todos los modelos de bicicletas que vamos a vender. Para facilidad de uso, a cada bicicleta le daremos un identificador, un nombre y una descripción.
 
@@ -102,5 +102,30 @@ public class Articulo {
 }
 ```
 
+## La base de datos
 
+Ya tenemos definida nuestra tabla, ahora necesitamos crear una base de datos para todos los modelos de bicicletas que vamos a vender. Esa base de datos va a vivir en memoria, esto quiere decir que va a existir mientras la aplicación esté corriendo.
 
+Es aquí donde JPA y H2 entran en acción. Normalmente nos gustaría dar de alta nuevas bicicletas, o consultar el catálogo por alguna marca en particular, o consultar todos los modelos de bicicletas, o eliminar alguna cuando no exista disponibilidad.
+
+Esto podría darnos una idea de que necesitamos crear mucho código para tener esa funcionalidad, pero JPA nos hará el trabajo fácil.
+
+1. Crear el paquete mx.com.sps.spring.jpa.database.articulos.repositories
+2. Debajo del paquete repositories, crear una nueva interfaz Java: RepositorioArticulos
+3. Extender la interfaz de CrudRepository (org.springframework.data.repository.CrudRepository)
+4. Indicar qué tipo de objeto administra el repositorio: Articulo
+5. Indicar qué tipo de identificador usa la entidad: Long
+6. ¡Felicidades! Ya generaste tu primer repositorio de artículos. Es en serio, con esto tenemos disponible toda la funcionalidad CRUD para esa entidad o tabla. No es necesario hacer nada más.
+
+RepositorioArticulos.java
+```java
+package mx.com.sps.spring.jpa.database.articulos.repositories;
+
+import org.springframework.data.repository.CrudRepository;
+
+import mx.com.sps.spring.jpa.database.articulos.entities.Articulo;
+
+public interface RepositorioArticulos extends CrudRepository<Articulo, Long> {
+
+}
+```
