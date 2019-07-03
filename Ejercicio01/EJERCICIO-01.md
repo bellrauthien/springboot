@@ -224,36 +224,6 @@ El resultado deberá ser lo siguiente:
 Todo esto lo podremos ver en la consola, la salida deberá ser más o menos la siguiente:
 
 ```
-[INFO] Scanning for projects...
-[INFO]
-[INFO] --------------< mx.com.sps.spring:jpa.database.articulos >--------------
-[INFO] Building RepositorioArticulos 0.0.1-SNAPSHOT
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO]
-[INFO] >>> spring-boot-maven-plugin:2.1.6.RELEASE:run (default-cli) > test-compile @ jpa.database.articulos >>>
-[INFO]
-[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ jpa.database.articulos ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 1 resource
-[INFO] Copying 0 resource
-[INFO]
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ jpa.database.articulos ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 3 source files to C:\Leo\repositories\springboot\Ejercicio01\jpa.database.articulos\target\classes
-[INFO]
-[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ jpa.database.articulos ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory C:\Leo\repositories\springboot\Ejercicio01\jpa.database.articulos\src\test\resources
-[INFO]
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ jpa.database.articulos ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to C:\Leo\repositories\springboot\Ejercicio01\jpa.database.articulos\target\test-classes
-[INFO]
-[INFO] <<< spring-boot-maven-plugin:2.1.6.RELEASE:run (default-cli) < test-compile @ jpa.database.articulos <<<
-[INFO]
-[INFO]
-[INFO] --- spring-boot-maven-plugin:2.1.6.RELEASE:run (default-cli) @ jpa.database.articulos ---
-
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -262,50 +232,41 @@ Todo esto lo podremos ver en la consola, la salida deberá ser más o menos la s
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.6.RELEASE)
 
-2019-07-03 18:11:26.323  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : Starting RepositorioArticulosApplication on DESKTOP-3B0II39 with PID 30856 (C:\Leo\repositories\springboot\Ejercicio01\jpa.database.articulos\target\classes started by admin in C:\Leo\repositories\springboot\Ejercicio01\jpa.database.articulos)
-2019-07-03 18:11:26.327  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : No active profile set, falling back to default profiles: default
-2019-07-03 18:11:26.762  INFO 30856 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-03 18:11:26.902  INFO 30856 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128ms. Found 1 repository interfaces.
-2019-07-03 18:11:27.301  INFO 30856 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-07-03 18:11:27.452  INFO 30856 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-07-03 18:11:27.511  INFO 30856 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-        name: default
-        ...]
-2019-07-03 18:11:27.573  INFO 30856 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
-2019-07-03 18:11:27.574  INFO 30856 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-07-03 18:11:27.705  INFO 30856 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-07-03 18:11:28.005  INFO 30856 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2019-07-03 18:11:28.529  INFO 30856 --- [           main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6262d5e'
-2019-07-03 18:11:28.532  INFO 30856 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-03 18:11:29.171  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : Started RepositorioArticulosApplication in 3.151 seconds (JVM running for 6.921)
-2019-07-03 18:11:29.172  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : *** 1. Agregar bicicletas a la base de datos ***
-2019-07-03 18:11:29.225  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : *** 2. Consultar el catßlogo completo de bicicletas ***
-2019-07-03 18:11:29.261  INFO 30856 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-07-03 18:11:29.361  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : mx.com.sps.spring.jpa.database.articulos.entities.Articulo@26ac2fa3
-2019-07-03 18:11:29.361  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : mx.com.sps.spring.jpa.database.articulos.entities.Articulo@d46ebac
-2019-07-03 18:11:29.362  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : mx.com.sps.spring.jpa.database.articulos.entities.Articulo@4ad00c90
-2019-07-03 18:11:29.363  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : mx.com.sps.spring.jpa.database.articulos.entities.Articulo@59673cf9
-2019-07-03 18:11:29.363  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : mx.com.sps.spring.jpa.database.articulos.entities.Articulo@27c23973
-2019-07-03 18:11:29.364  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : mx.com.sps.spring.jpa.database.articulos.entities.Articulo@1de3bdac
-2019-07-03 18:11:29.365  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : *** 3. Consultar la bicicleta con id=3 ***
-2019-07-03 18:11:29.375  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : Optional[mx.com.sps.spring.jpa.database.articulos.entities.Articulo@1392aa77]
-2019-07-03 18:11:29.375  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : *** 4. Eliminar del catßlogo la bicicleta con id=2 ***
-2019-07-03 18:11:29.385  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : *** 5. Consultar el catßlogo actualizado de bicicletas ***
-2019-07-03 18:11:29.387  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : mx.com.sps.spring.jpa.database.articulos.entities.Articulo@303158e3
-2019-07-03 18:11:29.388  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : mx.com.sps.spring.jpa.database.articulos.entities.Articulo@525a38ea
-2019-07-03 18:11:29.390  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : mx.com.sps.spring.jpa.database.articulos.entities.Articulo@77dc91b9
-2019-07-03 18:11:29.392  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : mx.com.sps.spring.jpa.database.articulos.entities.Articulo@34ba7b78
-2019-07-03 18:11:29.392  INFO 30856 --- [           main] .s.j.d.a.RepositorioArticulosApplication : mx.com.sps.spring.jpa.database.articulos.entities.Articulo@e76db4c
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 6.153 s
-[INFO] Finished at: 2019-07-03T18:11:29-05:00
-[INFO] ------------------------------------------------------------------------
-2019-07-03 18:11:29.418  INFO 30856 --- [       Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-03 18:11:29.418  INFO 30856 --- [       Thread-3] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2019-07-03 18:11:29.426  INFO 30856 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-07-03 18:11:29.429  INFO 30856 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+Starting RepositorioArticulosApplication on DESKTOP-3B0II39 with PID 27896 (C:\Leo\repositories\springboot\Ejercicio01\jpa.database.articulos\target\classes started by admin in C:\Leo\repositories\springboot\Ejercicio01\jpa.database.articulos)
+No active profile set, falling back to default profiles: default
+Bootstrapping Spring Data repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 43ms. Found 1 repository interfaces.
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+HHH000412: Hibernate Core {5.3.10.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6a66f1b8'
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Started RepositorioArticulosApplication in 3.116 seconds (JVM running for 6.808)
+*** 1. Agregar bicicletas a la base de datos ***
+*** 2. Consultar el catßlogo completo de bicicletas ***
+HHH000397: Using ASTQueryTranslatorFactory
+Articulo[id=1, nombre=Giant On-Road City, descripcion=Escape]
+Articulo[id=2, nombre=Giant X-Road Adventure, descripcion=Roam Disc]
+Articulo[id=3, nombre=Giant Off-Road XC, descripcion=Anthem Advanced]
+Articulo[id=4, nombre=Alubike Urbana, descripcion=Spicy DIM]
+Articulo[id=5, nombre=Alubike MTB, descripcion=Sierra]
+Articulo[id=6, nombre=Alubike Ruta, descripcion=K24]
+*** 3. Consultar la bicicleta con id=3 ***
+Optional[Articulo[id=3, nombre=Giant Off-Road XC, descripcion=Anthem Advanced]]
+*** 4. Eliminar del catßlogo la bicicleta con id=2 ***
+*** 5. Consultar el catßlogo actualizado de bicicletas ***
+Articulo[id=1, nombre=Giant On-Road City, descripcion=Escape]
+Articulo[id=3, nombre=Giant Off-Road XC, descripcion=Anthem Advanced]
+Articulo[id=4, nombre=Alubike Urbana, descripcion=Spicy DIM]
+Articulo[id=5, nombre=Alubike MTB, descripcion=Sierra]
+Articulo[id=6, nombre=Alubike Ruta, descripcion=K24]
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Shutdown completed.
 ```
 
 ## Hágalo usted mismo
