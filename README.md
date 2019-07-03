@@ -1,4 +1,11 @@
-# SpringBoot getting started
+# Explorando SpringBoot
+
+## Entorno de Desarrollo
+
+Necesitamos:
+* Java
+* Eclipse
+* Maven
 
 ## JPA
-Iniciemos con una aplicación de SpringBoot usando JPA para crear e interactuar con un repositorio en memoria.
+Ejercicio 1: Crear una aplicación de SpringBoot usando JPA para crear e interactuar con un repositorio (base de datos) en memoria.
