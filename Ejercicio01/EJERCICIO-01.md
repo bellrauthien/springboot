@@ -62,6 +62,11 @@ import javax.persistence.Id;
 @Entity
 public class Articulo {
 
+	@Override
+	public String toString() {
+		return String.format("Articulo[id=%d, nombre=%s, descripcion=%s]", id, nombre, descripcion);
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
